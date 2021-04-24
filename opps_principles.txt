@@ -1,0 +1,112 @@
+Q1. List out different OOPS principles and explain ?
+
+Answer:
+
+There are 4 major principles that make an language Object Oriented. These are Encapsulation, Data Abstraction, Polymorphism and Inheritance. These are also called as four pillars of Object Oriented Programming.
+
+Encapsulation:
+
+Encapsulation is the mechanism of hiding of data implementation by restricting access to public methods. Instance variables are kept private and accessor methods are made public to achieve this.
+
+public class Employee {
+    private String name;
+    private Date dob;    public String getName() {
+        return name;
+    }    public void setName(String name) {
+        this.name = name;
+    }    public Date getDob() {
+        return dob;
+    }    public void setDob(Date dob) {
+        this.dob = dob;
+    }
+}
+
+
+Abstraction:
+
+Abstract means a concept or an Idea which is not associated with any particular instance. Using abstract class/Interface we express the intent of the class rather than the actual implementation. In a way, one class should not know the inner details of another in order to use it, just knowing the interfaces should be good enough.
+
+
+Inheritance:
+
+Inheritances expresses “is-a” and/or “has-a” relationship between two objects. Using Inheritance, In derived classes we can reuse the code of existing super classes. In Java, concept of “is-a” is based on class inheritance (using extends) or interface implementation 
+
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+x = Person("John", "Doe")
+x.printname()
+
+class Student(Person):
+  pass
+
+x = Student("Mike", "Olsen")
+x.printname()
+
+
+Polymorphism:
+
+It means one name many forms. It is further of two types — static and dynamic. Static polymorphism is achieved using method overloading and dynamic polymorphism using method overriding. It is closely related to inheritance. We can write a code that works on the superclass, and it will work with any subclass type as well.
+
+Polymorphic print method
+public void print(Collection<String> collection) {
+    for (String s : collection) {
+        System.out.println("s = " + s);
+            }
+}
+Passing an ArrayList
+
+Collection<String> collection1 = new ArrayList<>();
+collection1.add("A");
+collection1.add("D");
+collection1.add("B");
+collection1.add("C");
+print(collection1); (1)
+
+1.	elements will be printed as per the insertion order of elements into arraylist
+
+Program output
+
+s = A
+s = D
+s = B
+s = C
+
+Passing an TreeSet
+
+Collection<String> collection2 = new TreeSet<>();
+collection2.add("A");
+collection2.add("D");
+collection2.add("B");
+collection2.add("C");
+print(collection2);   
+
+1.	elements will be printed as per the natural order
+
+Program output
+
+s = A
+s = B
+s = C
+s = D
+
+We just saw that print() method’s behavior is determined by the actual type of object passed to it at run time. That’s polymorphism!
+Important Facts
+1.	Other than objects of type java.lang.Object, all java objects are polymorphic i.e. they pass the IS-A test for their own type as well as for class Object.
+2.	A reference variable’s type determines the methods that can be invoked on the object that variable is referencing to. In the example above, print() method can only invoke methods that are listed on Collection interface irrespective the type of actual object passed to this method.
+3.	Polymorphic method invocation applies only to the instance methods (not to static methods, not to variables). Only overriden instance methods are dynamically invoked based on the real object’s type at runtime.
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,23 @@
+Q6. Explain virtual memory.
+
+Answer:
+
+In computing, virtual memory, or virtual storage[b] is a memory management technique that provides 
+an "idealized abstraction of the storage resources that are actually available on a given machine"[3] 
+which "creates the illusion to users of a very large (main) memory".[4]
+The computer's operating system, using a combination of hardware and software, 
+maps memory addresses used by a program, called virtual addresses, into physical addresses in computer memory. 
+Main storage, as seen by a process or task, appears as a contiguous address space or collection of contiguous segments. 
+The operating system manages virtual address spaces and the assignment of real memory to virtual memory. 
+Address translation hardware in the CPU, often referred to as a memory management unit (MMU), 
+automatically translates virtual addresses to physical addresses. 
+Software within the operating system may extend these capabilities to provide a virtual address 
+space that can exceed the capacity of real memory and thus reference more memory than is physically present in the computer.
+
+The primary benefits of virtual memory include freeing applications from having to manage a shared memory space, 
+ability to share memory used by libraries between processes, increased security due to memory isolation, 
+and being able to conceptually use more memory than might be physically available, using the technique of paging or segmentation.
+Virtual memory makes application programming easier by hiding fragmentation of physical memory; 
+by delegating to the kernel the burden of managing the memory hierarchy (eliminating the need for the program to handle overlays explicitly); 
+and, when each process is run in its own dedicated address space, by obviating the need to relocate program code or to access memory with relative addressing.
+Memory virtualization can be considered a generalization of the concept of virtual memory.
